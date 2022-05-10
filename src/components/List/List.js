@@ -50,7 +50,7 @@ const StyledPrice = styled.span`
   flex: 0 105px;
 `;
 
-const List = () => {
+const List = ({ name, price }) => {
   return (
     <>
       <StyledArticles className="list-unstyled col-12">
@@ -58,8 +58,8 @@ const List = () => {
           <StyledCheckboxContainer className="col">
             <input type="checkbox" />
           </StyledCheckboxContainer>
-          <StyledArticleName className="px-0 col">Pan</StyledArticleName>
-          <StyledPrice className="col">0.75€</StyledPrice>
+          <StyledArticleName className="px-0 col">{name}</StyledArticleName>
+          <StyledPrice className="col">{price}€</StyledPrice>
           <a href="delete-article" className="col">
             <FaTimes className="icon" />
           </a>
